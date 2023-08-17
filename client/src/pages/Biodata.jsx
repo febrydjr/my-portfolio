@@ -7,7 +7,7 @@ const Biodata = () => {
       <Text fontSize={"2xl"} fontWeight={"bold"}>
         FEBRY DHARMAWAN JUNIOR
       </Text>
-      <Image mt={6} src="https://picsum.photos/1920/1080" alt="Home" />
+      <Image mt={6} src="https://picsum.photos/1920/1080" alt="Home Img" />
     </Box>
   );
 };

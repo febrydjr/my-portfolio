@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <Box bg={"#F3F3F3"} h={"100%"}>
+    <Box fontFamily={"Victor Mono"} bg={"#F3F3F3"} h={"100%"}>
       {/* <Navbar /> */}
       <Sidebar />
       <Routes>

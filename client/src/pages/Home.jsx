@@ -8,7 +8,7 @@ const Home = () => {
       <Text fontSize={"2xl"} fontWeight={"bold"}>
         FEBRY DHARMAWAN JUNIOR
       </Text>
-      <Image mt={6} src="https://picsum.photos/1920/1780" alt="Home Picture" />
+      <Image mt={6} src="https://picsum.photos/1920/1780" alt="HomePicture" />
     </Box>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, Link, VStack, Avatar } from "@chakra-ui/react";
 import Home from "../pages/Home";
 import Biodata from "../pages/Biodata";
+import Contact from "../pages/Contact";
 
 const Sidebar = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -15,7 +16,7 @@ const Sidebar = () => {
       case "portfolio":
         return "<Portfolio />;";
       case "contact":
-        return "<Contact />;";
+        return <Contact />;
       default:
         return null;
     }
