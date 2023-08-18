@@ -3,6 +3,7 @@ import { Box, Button, Link, VStack, Avatar } from "@chakra-ui/react";
 import Home from "../pages/Home";
 import Biodata from "../pages/Biodata";
 import Contact from "../pages/Contact";
+import Portfolio from "../pages/Portfolio";
 
 const Sidebar = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -14,7 +15,7 @@ const Sidebar = () => {
       case "biodata":
         return <Biodata />;
       case "portfolio":
-        return "<Portfolio />;";
+        return <Portfolio />;
       case "contact":
         return <Contact />;
       default:
@@ -31,14 +32,8 @@ const Sidebar = () => {
       display="flex"
     >
       <VStack gap={4} align="flex-end" p={4}>
-        <Avatar
-          display={"flex"}
-          src="https://picsum.photos/200/300"
-          size={"2xl"}
-        />
-        <Link mt={2} onClick={() => setCurrentPage("home")}>
-          Home
-        </Link>
+        <Avatar display={"flex"} src="avatar.png" size={"2xl"} mb={2} />
+        <Link onClick={() => setCurrentPage("home")}>Home</Link>
         <Link onClick={() => setCurrentPage("biodata")}>Biodata</Link>
         <Link onClick={() => setCurrentPage("portfolio")}>Portfolio</Link>
         <Link onClick={() => setCurrentPage("contact")}>Contact</Link>
