@@ -18,6 +18,8 @@ const Sidebar = () => {
         return <Portfolio />;
       case "contact":
         return <Contact />;
+      case "stack":
+        return <Home />;
       default:
         return null;
     }
@@ -36,6 +38,7 @@ const Sidebar = () => {
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
         <Link onClick={() => setCurrentPage("biodata")}>Biodata</Link>
         <Link onClick={() => setCurrentPage("portfolio")}>Portfolio</Link>
+        <Link onClick={() => setCurrentPage("stack")}>Stack</Link>
         <Link onClick={() => setCurrentPage("contact")}>Contact</Link>
       </VStack>
       <Box p={4}>{renderPage()}</Box>

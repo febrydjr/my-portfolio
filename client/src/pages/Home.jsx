@@ -12,7 +12,7 @@ const Home = () => {
         Introduction
       </Text>
       <Quote />
-      <Image mt={6} w={"1920px"} h={"710px"} src="wave.gif" alt="HomePicture" />
+      <Image mt={6} w={"1920px"} h={"720px"} src="wave.gif" alt="HomePicture" />
     </Box>
   );
 };

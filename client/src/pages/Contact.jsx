@@ -11,7 +11,7 @@ import {
 import SocialMedia from "../components/SocialMedia";
 const Contact = () => {
   return (
-    <Box mt={24} w={"100vh"}>
+    <Box mt={24} w={"100vh"} h={"88vh"}>
       <Text fontSize={"2xl"} fontWeight={"bold"}>
         FEBRY DHARMAWAN JUNIOR
       </Text>
@@ -21,6 +21,7 @@ const Contact = () => {
       <Box mt={6} fontSize={`13px`}>
         <Text>febrydj99@gmail.com</Text>
         <Text>Phone: 081234171936</Text>
+        <Text>Jl. Pahlawan RT 11 RW 02 Damarsi, Buduran, Sidoarjo 61252</Text>
       </Box>
       <Box>
         <SocialMedia />

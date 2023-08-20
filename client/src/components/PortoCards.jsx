@@ -90,7 +90,7 @@ const PortoCard = (props) => {
 
         <VStack py={2} px={[2, 4]} spacing={1} align="start" w="100%">
           <Flex justifyContent="space-between" width="100%">
-            <Tooltip hasArrow label="Github link" placement="top">
+            <Tooltip hasArrow label="Go to Repositories" placement="top">
               <HStack>
                 <Icon as={FiGithub} boxSize="0.9em" mt={"1px"} />
                 <Text
@@ -146,7 +146,7 @@ const PortoCard = (props) => {
       </VStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered allowPinchZoom>
         <ModalOverlay />
-        <ModalContent bg="none" maxW={"28rem"} w="auto">
+        <ModalContent bg="none" maxW={"36rem"} w="auto">
           <ModalBody p={0} rounded="lg" overflow="hidden" bg="none">
             <Center>
               <Image src={cover} rounded="lg" alt="Repo image" />
