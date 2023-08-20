@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Biodata from "../pages/Biodata";
 import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio";
+import Skills from "../pages/Skills";
 
 const Sidebar = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -19,7 +20,7 @@ const Sidebar = () => {
       case "contact":
         return <Contact />;
       case "stack":
-        return <Home />;
+        return <Skills />;
       default:
         return null;
     }
@@ -36,9 +37,9 @@ const Sidebar = () => {
       <VStack gap={4} align="flex-end" p={4}>
         <Avatar display={"flex"} src="avatar.png" size={"2xl"} mb={2} />
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
-        <Link onClick={() => setCurrentPage("biodata")}>Biodata</Link>
+        <Link onClick={() => setCurrentPage("biodata")}>CV</Link>
         <Link onClick={() => setCurrentPage("portfolio")}>Portfolio</Link>
-        <Link onClick={() => setCurrentPage("stack")}>Stack</Link>
+        <Link onClick={() => setCurrentPage("stack")}>Stack Skills</Link>
         <Link onClick={() => setCurrentPage("contact")}>Contact</Link>
       </VStack>
       <Box p={4}>{renderPage()}</Box>

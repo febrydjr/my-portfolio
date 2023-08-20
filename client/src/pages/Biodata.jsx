@@ -21,7 +21,7 @@ const Biodata = () => {
         FEBRY DHARMAWAN JUNIOR
       </Text>
       <Text mt={5} fontWeight={"bold"}>
-        Biodata
+        Curriculum Vitae
       </Text>
       <Box mt={2}>
         <Stack
@@ -29,7 +29,7 @@ const Biodata = () => {
           borderRadius={12}
           py={16}
           px={8}
-          spacing={{ base: 8, md: 10 }}
+          spacing={{ base: 8, md: 8 }}
           align={"center"}
           direction={"column"}
         >
@@ -47,8 +47,7 @@ const Biodata = () => {
             pengetahuan.
           </Text>
           <Box textAlign={"center"}>
-            <Avatar src={"foto.jpg"} mb={2} />
-
+            <Avatar size={"lg"} src={"foto.jpg"} mb={2} />
             <Text fontWeight={600}>Febry Dharmawan Junior</Text>
             <Text
               fontSize={"sm"}
