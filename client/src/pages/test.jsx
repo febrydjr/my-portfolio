@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
-// Replace test data with your own
 const features = Array.apply(null, Array(8)).map(function (x, i) {
   return {
     id: i,
@@ -33,8 +32,7 @@ export default function GridListWithHeading() {
           sed diam voluptua.
         </Text>
       </Stack>
-
-      <Container maxW={"6xl"} mt={10}>
+      <Box maxW={"6xl"} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {features.map((feature) => (
             <HStack key={feature.id} align={"top"}>
@@ -48,7 +46,7 @@ export default function GridListWithHeading() {
             </HStack>
           ))}
         </SimpleGrid>
-      </Container>
+      </Box>
     </Box>
   );
 }

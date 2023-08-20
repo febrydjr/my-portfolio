@@ -1,12 +1,18 @@
 import React from "react";
 import {
-  Image,
   Avatar,
   Box,
   Stack,
   Text,
   useColorModeValue,
+  Flex,
+  Button,
 } from "@chakra-ui/react";
+import EducationTimeline from "../components/Education";
+import ExperienceTimeline from "../components/Working";
+import Competency from "../components/Competency";
+import { Divider } from "@chakra-ui/react";
+import Organization from "../components/Organization";
 
 const Biodata = () => {
   return (
@@ -50,6 +56,14 @@ const Biodata = () => {
             >
               The Developer
             </Text>
+          </Box>
+          <Flex gap={4}>
+            <EducationTimeline />
+            <ExperienceTimeline />
+          </Flex>
+          <Organization />
+          <Box>
+            <Competency />
           </Box>
         </Stack>
       </Box>
