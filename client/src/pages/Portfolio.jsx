@@ -32,8 +32,8 @@ const Portfolio = () => {
         Portfolio
       </Text>
       <Text mt={1} fontSize={"sm"}>
-        Lists some of the open source repositories I have published or
-        contributed to
+        Enumerate a selection of the open-source repositories to which I have
+        either contributed or released.
       </Text>
       <Box>
         <Box maxW="100vw" mt={4}>

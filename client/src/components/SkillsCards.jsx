@@ -17,7 +17,7 @@ const SkillsCard = ({ name, image, link, description }) => {
 
   return (
     <motion.div whileHover={{ y: -5 }}>
-      <Link href="#" isExternal>
+      <Link href={link} isExternal>
         <HStack
           p={4}
           bg={useColorModeValue("white", "gray.800")}
