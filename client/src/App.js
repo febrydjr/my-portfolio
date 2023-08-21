@@ -3,15 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Box fontFamily={"Victor Mono"} bg={"#F3F3F3"}>
       {/* <Navbar /> */}
-      <Sidebar />
-      {/* <Routes>
-        <Route></Route>
-      </Routes> */}
+      {/* <Sidebar /> */}
+      <Routes>
+        <Route path="/" element={<Sidebar />}></Route>
+      </Routes>
     </Box>
   );
 }
