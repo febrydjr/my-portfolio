@@ -9,9 +9,9 @@ function App() {
     <Box fontFamily={"Victor Mono"} bg={"#F3F3F3"}>
       {/* <Navbar /> */}
       <Sidebar />
-      <Routes>
+      {/* <Routes>
         <Route></Route>
-      </Routes>
+      </Routes> */}
     </Box>
   );
 }
