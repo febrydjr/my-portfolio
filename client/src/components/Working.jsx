@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Box, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import {
   VerticalTimeline,
@@ -6,30 +6,52 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdOutlineWorkOutline } from "react-icons/md";
+import { extendTheme } from "@chakra-ui/react";
 const ExperienceTimeline = () => {
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
+  };
+
+  const theme = extendTheme({ breakpoints });
+  const [isSmallerThanMd] = useMediaQuery(
+    "(max-width: " + theme.breakpoints.md + ")"
+  );
+
   const title = {
-    fontSize: "16px",
+    fontSize: isSmallerThanMd ? "lg" : "2xl",
     fontWeight: "bold",
   };
+
   const subtitle = {
-    fontWeight: "normal",
-    fontSize: "14px",
-    marginTop: "2px",
+    fontSize: isSmallerThanMd ? "14px" : "14px",
+    marginTop: isSmallerThanMd ? "0.5rem" : "2px",
   };
+
   const description = {
-    fontSize: "13px",
+    fontSize: isSmallerThanMd ? "sm" : "13px",
   };
+
   const objective = {
-    fontSize: "13px",
-    marginTop: "8px",
+    fontSize: isSmallerThanMd ? "12px" : "13px",
+    marginTop: isSmallerThanMd ? "0.5rem" : "8px",
   };
+
   const list = {
-    marginLeft: "22px",
+    marginLeft: isSmallerThanMd ? "20px" : "22px",
+    fontSize: isSmallerThanMd ? "12px" : "13px",
   };
   return (
-    <>
+    <Box align="left" w={isSmallerThanMd ? "41vh" : "49vh"}>
       <VerticalTimeline layout="1-column-left">
-        <Text ml={12} fontSize={"2xl"} fontWeight={"bold"}>
+        <Text
+          ml={12}
+          fontSize={isSmallerThanMd ? "lg" : "2xl"}
+          fontWeight={"bold"}
+        >
           Experience
         </Text>
         <VerticalTimelineElement
@@ -73,7 +95,7 @@ const ExperienceTimeline = () => {
           </ol>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </>
+    </Box>
   );
 };
 

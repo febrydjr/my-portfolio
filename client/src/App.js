@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Box fontFamily={"Victor Mono"} bg={"#F3F3F3"}>
+    <Box fontFamily={"Victor Mono"} borderRadius={"none"}>
       {/* <Navbar /> */}
       {/* <Sidebar /> */}
       <Routes>

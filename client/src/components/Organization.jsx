@@ -8,18 +8,34 @@ import {
   Box,
   useDisclosure,
   Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+
 function CollapseEx() {
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
+  };
+
+  const theme = extendTheme({ breakpoints });
+  const [isSmallerThanMd] = useMediaQuery(
+    "(max-width: " + theme.breakpoints.md + ")"
+  );
+
   const { isOpen, onToggle } = useDisclosure();
   const title = {
-    fontSize: "20px",
+    fontSize: isSmallerThanMd ? "16px" : "xl",
     textAlign: "center",
     fontWeight: "bold",
     mb: "20px",
   };
   const subtitle = {
     fontWeight: "normal",
-    fontSize: "14px",
+    fontSize: isSmallerThanMd ? "13px" : "14px",
     marginTop: "2px",
     textAlign: "center",
   };

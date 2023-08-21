@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Box, Button, Link, VStack, Avatar } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Link,
+  VStack,
+  Avatar,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Home from "../pages/Home";
 import Biodata from "../pages/Biodata";
 import Contact from "../pages/Contact";
@@ -8,6 +15,15 @@ import Skills from "../pages/Skills";
 
 const Sidebar = () => {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)"); // Check if screen is smaller than md breakpoint
+
+  const breakpoints = {
+    sm: "30em", // 480px
+    md: "48em", // 768px
+    lg: "62em", // 992px
+    xl: "80em", // 1280px
+    "2xl": "96em", // 1536px
+  };
 
   const renderPage = () => {
     switch (currentPage) {
@@ -28,13 +44,20 @@ const Sidebar = () => {
 
   return (
     <Box
-      // bg={"#F3F3F3"}
+      bg={"#F3F3F3"}
+      h={"100%"}
       fontFamily={"Victor Mono"}
-      gap={6}
-      justifyContent={"center"}
+      gap={isSmallerThanMd ? 4 : 6}
+      justifyContent={isSmallerThanMd ? "center" : "center"} // Center content on smaller screens
+      flexDirection={isSmallerThanMd ? "column" : "row"} // Stack items vertically on smaller screens
       display="flex"
     >
-      <VStack gap={4} align="flex-end" p={4}>
+      <VStack
+        gap={4}
+        align={isSmallerThanMd ? "center" : "flex-end"} // Center align items on smaller screens
+        p={4}
+        mb={isSmallerThanMd ? 4 : 0} // Add margin at the bottom on smaller screens
+      >
         <Avatar display={"flex"} src="av.png" size={"2xl"} mb={2} />
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
         <Link onClick={() => setCurrentPage("biodata")}>CV</Link>
@@ -42,7 +65,7 @@ const Sidebar = () => {
         <Link onClick={() => setCurrentPage("stack")}>Stack Skills</Link>
         <Link onClick={() => setCurrentPage("contact")}>Contact</Link>
       </VStack>
-      <Box p={4}>{renderPage()}</Box>
+      <Box>{renderPage()}</Box>
     </Box>
   );
 };

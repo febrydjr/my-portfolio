@@ -71,7 +71,13 @@ const PortoCard = (props) => {
   };
 
   return (
-    <Box onClick={handleClick} cursor="pointer" size="xl">
+    <Box
+      onClick={handleClick}
+      border={"1px solid"}
+      borderColor={useColorModeValue("gray.300", "gray.700")}
+      cursor="pointer"
+      size="xl"
+    >
       <VStack
         // rounded="xl"
         borderWidth="1px"

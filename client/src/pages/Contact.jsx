@@ -1,6 +1,8 @@
 import React from "react";
+import { extendTheme } from "@chakra-ui/react";
 import {
   Box,
+  useMediaQuery,
   Text,
   Image,
   VStack,
@@ -10,9 +12,26 @@ import {
 } from "@chakra-ui/react";
 import SocialMedia from "../components/SocialMedia";
 const Contact = () => {
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
+  };
+
+  const theme = extendTheme({ breakpoints });
+
+  const [isSmallerThanMd] = useMediaQuery(
+    "(max-width: " + theme.breakpoints.md + ")"
+  );
   return (
-    <Box mt={24} w={"100vh"} h={"88vh"}>
-      <Text fontSize={"2xl"} fontWeight={"bold"}>
+    <Box
+      ml={isSmallerThanMd ? 4 : 0}
+      mt={isSmallerThanMd ? 4 : 24}
+      h={isSmallerThanMd ? "auto" : "100vh"}
+    >
+      <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} fontWeight={"bold"}>
         FEBRY DHARMAWAN JUNIOR
       </Text>
       <Text mt={5} fontWeight={"bold"}>
@@ -21,7 +40,9 @@ const Contact = () => {
       <Box mt={6} fontSize={`13px`}>
         <Text>febrydj99@gmail.com</Text>
         <Text>Phone: 081234171936</Text>
-        <Text>Jl. Pahlawan RT 11 RW 02 Damarsi, Buduran, Sidoarjo 61252</Text>
+        <Text>
+          Jl. Pahlawan RT 11 RW 02 Damarsi, <br /> Buduran, Sidoarjo 61252
+        </Text>
       </Box>
       <Box>
         <SocialMedia />
@@ -36,7 +57,7 @@ const Contact = () => {
           }}
           h={"40px"}
           type="text"
-          w={"40vh"}
+          w={isSmallerThanMd ? "35vh" : "50vh"}
           border={"1px solid black"}
           variant={"outline"}
           placeholder="Your Name"
@@ -50,12 +71,13 @@ const Contact = () => {
           }}
           h={"40px"}
           type="email"
-          w={"40vh"}
+          w={isSmallerThanMd ? "35vh" : "50vh"}
           border={"1px solid black"}
           variant={"outline"}
           placeholder="Your Email"
         />
         <Textarea
+          w={isSmallerThanMd ? "42vh" : "100vh"}
           _hover={{
             bg: "white",
             color: "black",
@@ -75,10 +97,11 @@ const Contact = () => {
           w={"18vh"}
           mt={2}
           ml="auto"
+          mr={isSmallerThanMd ? 5 : 0}
         >
           Send Message
         </Button>
-        <Text mt={4} fontSize={`12px`}>
+        <Text mb={3} mt={4} fontSize={`12px`}>
           @2023 Febry Dharmawan Junior
         </Text>
       </Box>

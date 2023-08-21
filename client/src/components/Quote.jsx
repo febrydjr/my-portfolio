@@ -7,8 +7,20 @@ import {
   Avatar,
   Icon,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { FaQuoteRight } from "react-icons/fa";
+import { extendTheme } from "@chakra-ui/react"; // Import extendTheme
+
+const breakpoints = {
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1200px",
+  "2xl": "1536px",
+};
+
+const theme = extendTheme({ breakpoints });
 
 const testimonial = {
   username: "Febry Dharmawan Jr",
@@ -20,19 +32,22 @@ const testimonial = {
 };
 
 const Quote = () => {
+  const [isSmallerThanMd] = useMediaQuery(
+    "(max-width: " + theme.breakpoints.md + ")"
+  );
+
   return (
     <Container
       position={"absolute"}
       fontFamily={"Victor Mono"}
       maxW="5xl"
-      mt={4}
-      p={{ base: 10, md: 14 }}
+      p={isSmallerThanMd ? { base: 12, md: 10 } : { base: 10, md: 14 }} // Responsive padding
       _hover={{
         transform: "scale(1.1)",
       }}
+      mt={isSmallerThanMd ? 0 : 12}
     >
       <VStack
-        // spacing={3}
         p={4}
         bg={useColorModeValue("#F3F3F3", "blackAlpha.600")}
         border="3px solid"
@@ -53,11 +68,10 @@ const Quote = () => {
         />
         <Stack direction="column" spacing={5}>
           <Text color="gray.500">{testimonial.content}</Text>
-          {/* <Text color="gray.500">frontend!</Text> */}
           <Text
             fontWeight="bold"
-            fontSize="lg"
-            mr={12}
+            fontSize={isSmallerThanMd ? "md" : "lg"} // Responsive font size
+            mr={isSmallerThanMd ? 2 : 12} // Responsive margin
             align="right"
             style={{ marginRight: "3rem !important" }}
           >
@@ -69,10 +83,10 @@ const Quote = () => {
           src={testimonial.image}
           showBorder={true}
           borderColor="black"
-          size="xl"
+          size={isSmallerThanMd ? "md" : "xl"} // Responsive avatar size
           pos="absolute"
-          right="-48px"
-          bottom="-20px"
+          right={isSmallerThanMd ? "-24px" : "-48px"} // Responsive position
+          bottom={isSmallerThanMd ? "-12px" : "-20px"} // Responsive position
           shadow="lg"
         />
       </VStack>

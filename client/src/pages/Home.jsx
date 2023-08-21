@@ -1,18 +1,45 @@
 import React from "react";
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Image, useMediaQuery } from "@chakra-ui/react";
 import Quote from "../components/Quote";
+import { extendTheme } from "@chakra-ui/react";
+
+const breakpoints = {
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1200px",
+  "2xl": "1536px",
+};
+
+const theme = extendTheme({ breakpoints });
 
 const Home = () => {
+  const [isSmallerThanMd] = useMediaQuery(
+    "(max-width: " + theme.breakpoints.md + ")"
+  );
+
   return (
-    <Box mt={24} w={"100vh"}>
-      <Text fontSize={"2xl"} fontWeight={"bold"}>
+    <Box
+      ml={isSmallerThanMd ? 4 : 0}
+      mt={isSmallerThanMd ? 4 : 24}
+      h={isSmallerThanMd ? "auto" : "100vh"}
+      mb={isSmallerThanMd ? "20vh" : 0}
+    >
+      <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} fontWeight="bold">
         FEBRY DHARMAWAN JUNIOR
       </Text>
-      <Text mt={5} fontWeight={"bold"}>
+      <Text mt={isSmallerThanMd ? 3 : 4} fontWeight="bold">
         Introduction
       </Text>
       <Quote />
-      <Image mt={6} w={"1920px"} h={"720px"} src="wave.gif" alt="HomePic" />
+      <Image
+        mt={isSmallerThanMd ? 4 : 6}
+        w={isSmallerThanMd ? "95%" : "100vh"} // Responsive width
+        h={isSmallerThanMd ? "auto" : "755px"}
+        // p={isSmallerThanMd ? 0 : 4}
+        src="wave.gif"
+        alt="HomePic"
+      />
     </Box>
   );
 };
