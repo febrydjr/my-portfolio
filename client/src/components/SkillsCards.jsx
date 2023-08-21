@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   VStack,
   HStack,
@@ -9,11 +9,54 @@ import {
   Image,
   Skeleton,
 } from "@chakra-ui/react";
-import { usePalette } from "react-palette";
 import { motion } from "framer-motion";
 
+const extractColor = async (imageSrc) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = imageSrc;
+    img.crossOrigin = "Anonymous"; // Allow cross-origin loading for the image
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      context.drawImage(img, 0, 0, img.width, img.height);
+      const pixelData = context.getImageData(0, 0, img.width, img.height).data;
+
+      // Calculate the average color from the pixel data
+      let r = 0,
+        g = 0,
+        b = 0;
+      const totalPixels = img.width * img.height;
+      for (let i = 0; i < totalPixels * 4; i += 4) {
+        r += pixelData[i];
+        g += pixelData[i + 1];
+        b += pixelData[i + 2];
+      }
+      r = Math.floor(r / totalPixels);
+      g = Math.floor(g / totalPixels);
+      b = Math.floor(b / totalPixels);
+
+      resolve(`rgb(${r}, ${g}, ${b})`);
+    };
+    img.onerror = reject;
+  });
+};
+
 const SkillsCard = ({ name, image, link, description }) => {
-  const { data, loading } = usePalette(image);
+  const [bgColor, setBgColor] = useState("transparent");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    extractColor(image)
+      .then((color) => {
+        setBgColor(color);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error extracting color:", error);
+        setLoading(false);
+      });
+  }, [image]);
 
   return (
     <motion.div whileHover={{ y: -5 }}>
@@ -39,7 +82,7 @@ const SkillsCard = ({ name, image, link, description }) => {
             boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.015)"
           >
             <Box
-              bg={data.lightVibrant}
+              bg={bgColor}
               position="absolute"
               top={0}
               bottom={0}
