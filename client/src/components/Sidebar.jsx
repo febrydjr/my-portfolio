@@ -35,7 +35,7 @@ const Sidebar = () => {
       display="flex"
     >
       <VStack gap={4} align="flex-end" p={4}>
-        <Avatar display={"flex"} src="avatar.png" size={"2xl"} mb={2} />
+        <Avatar display={"flex"} src="av.png" size={"2xl"} mb={2} />
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
         <Link onClick={() => setCurrentPage("biodata")}>CV</Link>
         <Link onClick={() => setCurrentPage("portfolio")}>Portfolio</Link>

@@ -38,13 +38,18 @@ const Biodata = () => {
             textAlign={"center"}
             maxW={"3xl"}
           >
-            Lulusan Program Studi Teknik Informatika dari Universitas 17 Agustus
-            1945 Surabaya tahun 2022, memiliki ketertarikan pada bidang
-            Teknologi Informasi. Merupakan seseorang yang komunikatif, problem
-            solving yang baik, mudah beradaptasi, cekatan, kerja keras, mampu
-            bekerja sama dalam tim, ahli dalam troubleshooting, mengutamakan
-            kejujuran dalam bekerja, serta selalu memperluas pengalaman dan
-            pengetahuan.
+            Sebagai lulusan Program Studi Teknik Informatika dari Universitas 17
+            Agustus 1945 Surabaya tahun 2022, saya membawa ketertarikan yang
+            kuat dalam bidang Teknologi Informasi. Dengan kemampuan komunikasi
+            yang baik, kepemahaman dalam problem solving, serta adaptabilitas
+            yang tinggi, saya siap menghadapi berbagai tantangan. Saya memiliki
+            keahlian dalam bekerja kolaboratif dalam tim, menguasai
+            troubleshooting, dan menjunjung tinggi nilai kejujuran dalam setiap
+            tindakan. Dalam pengembangan web, saya tertarik khususnya pada
+            penggunaan tools seperti ReactJS, Chakra UI, dan JavaScript. Saya
+            berkomitmen untuk terus belajar, memperluas pengalaman, dan
+            mengaplikasikan pengetahuan saya guna mencapai hasil terbaik dalam
+            setiap proyek yang saya jalani.
           </Text>
           <Box textAlign={"center"}>
             <Avatar size={"lg"} src={"foto.jpg"} mb={2} />

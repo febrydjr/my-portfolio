@@ -14,7 +14,7 @@ const testimonial = {
   username: "Febry Dharmawan Jr",
   position: "Developer",
   company: "-",
-  image: "foto.jpg",
+  image: "malio.jpg",
   content: `Pada akhirnya, Virtual DOM mengajarkan kita bahwa perubahan adalah
   konstan, dan adaptasi adalah kunci kesuksesan.`,
 };

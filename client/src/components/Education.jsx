@@ -47,7 +47,7 @@ const EducationTimeline = () => {
       >
         <h3 style={{ ...title }}>Bootcamp Web Development</h3>
         <h4 style={{ ...subtitle }}>Purwadhika, Yogyakarta</h4>
-        <p style={{ ...objective }}>Graduated with a GPA of 89/100.</p>
+        <p style={{ ...objective }}>Graduated with a GPA of XXX/100.</p>
         <p style={{ ...date }}>May 2023 - Nov 2023</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement

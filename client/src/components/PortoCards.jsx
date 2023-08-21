@@ -17,12 +17,15 @@ import {
   Center,
   Flex,
   Tooltip,
+  Link,
+  Button,
 } from "@chakra-ui/react";
 import { AiOutlineStar } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 
 const PortoCard = (props) => {
-  const { title, cover, techStack, url, description, stargazers_count } = props;
+  const { title, cover, techStack, url, description, stargazers_count, live } =
+    props;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -30,6 +33,11 @@ const PortoCard = (props) => {
   };
 
   const handleLinkClick = (e, link) => {
+    window.open(link);
+    e.stopPropagation();
+  };
+
+  const handleLiveClick = (e, link) => {
     window.open(link);
     e.stopPropagation();
   };
@@ -141,6 +149,20 @@ const PortoCard = (props) => {
                 ))}
               </HStack>
             </Box>
+            {live !== "" && (
+              <Tag
+                mb={1}
+                borderRadius={"none"}
+                color="white"
+                bgColor={"#1DBF73"}
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                onClick={(e) => handleLinkClick(e, live)}
+              >
+                <Link>LIVE</Link>
+              </Tag>
+            )}
           </Flex>
         </VStack>
       </VStack>
