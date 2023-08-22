@@ -77,7 +77,7 @@ const Contact = () => {
           placeholder="Your Email"
         />
         <Textarea
-          w={isSmallerThanMd ? "53vh" : "100vh"}
+          w={isSmallerThanMd ? "52vh" : "100vh"}
           _hover={{
             bg: "white",
             color: "black",
