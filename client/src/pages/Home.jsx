@@ -23,7 +23,7 @@ const Home = () => {
       ml={isSmallerThanMd ? 4 : 0}
       mt={isSmallerThanMd ? 4 : 24}
       h={isSmallerThanMd ? "auto" : "100vh"}
-      mb={isSmallerThanMd ? "20vh" : 0}
+      mb={isSmallerThanMd ? "24vh" : 0}
     >
       <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} mb={5} fontWeight="bold">
         FEBRY DHARMAWAN JUNIOR
