@@ -25,6 +25,16 @@ const Contact = () => {
   const [isSmallerThanMd] = useMediaQuery(
     "(max-width: " + theme.breakpoints.md + ")"
   );
+  const sendEmail = () => {
+    const recipient = "febrydj99@gmail.com"; // Replace with your email address
+    const subject = encodeURIComponent("Contact Inquiry");
+    const body = encodeURIComponent(
+      `Hello,\n\nI hope this email finds you well. I am reaching out because I have some questions and inquiries regarding your services/products/website. Here are the details:\n\nName: [Your Name]\nEmail: [Your Email Address]\nPhone: [Your Phone Number]\n\nMessage:\n[Your Message Here]\n\nI would appreciate it if you could provide me with more information about [specific information you're seeking], and if possible, a quote for [specific product or service]?\n\nThank you for your time and assistance.\n\nBest regards,\n[Your Name]`
+    );
+
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <Box
       ml={isSmallerThanMd ? 4 : 0}
@@ -93,6 +103,7 @@ const Contact = () => {
         {/* <Flex justifyContent={"left"} alignItems={"center"}>   */}
         <Text>Connect with me?</Text>
         <Button
+          onClick={sendEmail}
           mr={isSmallerThanMd ? 5 : 0}
           bg={"black"}
           color={"white"}
