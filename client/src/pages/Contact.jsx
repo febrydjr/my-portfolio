@@ -37,7 +37,7 @@ const Contact = () => {
       <Text mt={5} fontWeight={"bold"}>
         Contact
       </Text>
-      <Box mt={6} fontSize={`13px`}>
+      <Box mt={4} fontSize={`13px`}>
         <Text>febrydj99@gmail.com</Text>
         <Text>Phone: 081234171936</Text>
         <Text>
