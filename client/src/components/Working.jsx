@@ -45,7 +45,7 @@ const ExperienceTimeline = () => {
     fontSize: isSmallerThanMd ? "12px" : "13px",
   };
   return (
-    <Box align="left" w={isSmallerThanMd ? "42vh" : "49vh"}>
+    <Box align="left" w={isSmallerThanMd ? "44vh" : "49vh"}>
       <VerticalTimeline layout="1-column-left">
         <Text
           ml={12}
