@@ -20,7 +20,7 @@ export default function PortfolioData() {
       language: "Javascript",
       techStack: ["react", "chakra-ui", "javascript"],
       url: "https://github.com/febrydjr/my-portfolio",
-      live: "",
+      live: "https://febrydjr.vercel.app",
       stargazers_count: 1,
       forks_count: 14,
     },
