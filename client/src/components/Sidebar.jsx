@@ -47,16 +47,17 @@ const Sidebar = () => {
       bg={"#F3F3F3"}
       h={"70%"}
       fontFamily={"Victor Mono"}
-      gap={isSmallerThanMd ? 4 : 6}
+      gap={isSmallerThanMd ? 0 : 6}
       justifyContent={isSmallerThanMd ? "center" : "center"} // Center content on smaller screens
       flexDirection={isSmallerThanMd ? "column" : "row"} // Stack items vertically on smaller screens
       display="flex"
     >
       <VStack
+        mt={2}
         gap={4}
         align={isSmallerThanMd ? "center" : "flex-end"} // Center align items on smaller screens
         p={4}
-        mb={isSmallerThanMd ? 4 : 0}
+        mb={isSmallerThanMd ? 0 : 0}
       >
         <Avatar display={"flex"} src="av.png" size={"2xl"} mb={2} />
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
@@ -65,7 +66,7 @@ const Sidebar = () => {
         <Link onClick={() => setCurrentPage("stack")}>Stack Skills</Link>
         <Link onClick={() => setCurrentPage("contact")}>Contact</Link>
       </VStack>
-      <Box>{renderPage()}</Box>
+      <Box mt={isSmallerThanMd ? 0 : 6}>{renderPage()}</Box>
     </Box>
   );
 };

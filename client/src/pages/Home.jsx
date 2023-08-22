@@ -25,7 +25,7 @@ const Home = () => {
       h={isSmallerThanMd ? "auto" : "100vh"}
       mb={isSmallerThanMd ? "20vh" : 0}
     >
-      <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} fontWeight="bold">
+      <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} mb={5} fontWeight="bold">
         FEBRY DHARMAWAN JUNIOR
       </Text>
       <Text mt={isSmallerThanMd ? 3 : 4} fontWeight="bold">
