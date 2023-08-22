@@ -37,7 +37,7 @@ const Skills = () => {
         FEBRY DHARMAWAN JUNIOR
       </Text>
       <Text mt={5} fontWeight={"bold"}>
-        Stack Skills
+        Skills Stack
       </Text>
       <Text mt={1} fontSize={"sm"}>
         Here is a compilation of the tools and technologies I frequently employ
