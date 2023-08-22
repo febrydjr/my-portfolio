@@ -45,6 +45,7 @@ const Quote = () => {
       _hover={{
         transform: "scale(1.1)",
       }}
+      w={isSmallerThanMd ? "95%" : "100vh"} // Responsive width
       mt={isSmallerThanMd ? 0 : 12}
     >
       <VStack
@@ -67,7 +68,9 @@ const Quote = () => {
           top="-1.5rem"
         />
         <Stack direction="column" spacing={5}>
-          <Text color="gray.500">{testimonial.content}</Text>
+          <Text fontSize={isSmallerThanMd ? "12px" : "18px"} color="gray.500">
+            {testimonial.content}
+          </Text>
           <Text
             fontWeight="bold"
             fontSize={isSmallerThanMd ? "md" : "lg"} // Responsive font size

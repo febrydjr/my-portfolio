@@ -90,6 +90,7 @@ const Contact = () => {
           placeholder="Input Your Message Here..."
         ></Textarea>
         <Button
+          mr={isSmallerThanMd ? 5 : 0}
           bg={"black"}
           color={"white"}
           _hover={{ bg: "white", color: "black", border: "1px solid black" }}
@@ -97,7 +98,6 @@ const Contact = () => {
           w={"18vh"}
           mt={2}
           ml="auto"
-          mr={isSmallerThanMd ? 5 : 0}
         >
           Send Message
         </Button>

@@ -35,8 +35,7 @@ const Home = () => {
       <Image
         mt={isSmallerThanMd ? 4 : 6}
         w={isSmallerThanMd ? "95%" : "100vh"} // Responsive width
-        h={isSmallerThanMd ? "auto" : "755px"}
-        // p={isSmallerThanMd ? 0 : 4}
+        h={isSmallerThanMd ? "auto" : "650px"}
         src="wave.gif"
         alt="HomePic"
       />

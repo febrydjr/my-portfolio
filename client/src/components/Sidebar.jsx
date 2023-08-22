@@ -45,7 +45,7 @@ const Sidebar = () => {
   return (
     <Box
       bg={"#F3F3F3"}
-      h={"100%"}
+      h={"70%"}
       fontFamily={"Victor Mono"}
       gap={isSmallerThanMd ? 4 : 6}
       justifyContent={isSmallerThanMd ? "center" : "center"} // Center content on smaller screens
@@ -56,7 +56,7 @@ const Sidebar = () => {
         gap={4}
         align={isSmallerThanMd ? "center" : "flex-end"} // Center align items on smaller screens
         p={4}
-        mb={isSmallerThanMd ? 4 : 0} // Add margin at the bottom on smaller screens
+        mb={isSmallerThanMd ? 4 : 0}
       >
         <Avatar display={"flex"} src="av.png" size={"2xl"} mb={2} />
         <Link onClick={() => setCurrentPage("home")}>Home</Link>
