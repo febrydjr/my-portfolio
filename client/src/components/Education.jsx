@@ -56,7 +56,7 @@ const EducationTimeline = () => {
   };
 
   return (
-    <Box w={isSmallerThanMd ? "41vh" : "49vh"}>
+    <Box w={isSmallerThanMd ? "42vh" : "49vh"}>
       <VerticalTimeline layout="1-column-right">
         <Text
           align="right"

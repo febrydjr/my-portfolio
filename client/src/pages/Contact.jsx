@@ -1,5 +1,5 @@
 import React from "react";
-import { extendTheme } from "@chakra-ui/react";
+import { Flex, extendTheme } from "@chakra-ui/react";
 import {
   Box,
   useMediaQuery,
@@ -29,7 +29,8 @@ const Contact = () => {
     <Box
       ml={isSmallerThanMd ? 4 : 0}
       mt={isSmallerThanMd ? 4 : 24}
-      h={isSmallerThanMd ? "auto" : "100vh"}
+      h={isSmallerThanMd ? "70vh" : "89vh"}
+      w={isSmallerThanMd ? "auto" : "100vh"}
     >
       <Text fontSize={isSmallerThanMd ? "xl" : "2xl"} fontWeight={"bold"}>
         FEBRY DHARMAWAN JUNIOR
@@ -48,7 +49,7 @@ const Contact = () => {
         <SocialMedia />
       </Box>
       <Box display={"flex"} gap={2} flexDirection={"column"} mt={6}>
-        <Input
+        {/* <Input
           _hover={{
             bg: "white",
             color: "black",
@@ -88,19 +89,22 @@ const Contact = () => {
           h={"140px"}
           variant={"outline"}
           placeholder="Input Your Message Here..."
-        ></Textarea>
+        ></Textarea> */}
+        {/* <Flex justifyContent={"left"} alignItems={"center"}>   */}
+        <Text>Connect with me?</Text>
         <Button
           mr={isSmallerThanMd ? 5 : 0}
           bg={"black"}
           color={"white"}
           _hover={{ bg: "white", color: "black", border: "1px solid black" }}
           borderRadius={"none"}
-          w={"18vh"}
-          mt={2}
-          ml="auto"
+          // w={"18vh"}
+          // mt={2}
+          // ml="auto"
         >
           Send Message
         </Button>
+        {/* </Flex> */}
         <Text mb={3} mt={4} fontSize={`12px`}>
           @2023 Febry Dharmawan Junior
         </Text>
