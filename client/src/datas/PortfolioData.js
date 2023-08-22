@@ -44,7 +44,7 @@ export default function PortfolioData() {
       language: "Javascript",
       techStack: ["node.js", "javascript"],
       url: "https://github.com/febrydjr/Backend-API-for-Web-Blog",
-      live: "",
+      live: "https://backend-api-for-web-blog-production.up.railway.app/api",
       stargazers_count: 0,
       forks_count: 8,
     },
