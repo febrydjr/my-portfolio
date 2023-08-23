@@ -68,7 +68,7 @@ export default function PortfolioData() {
       language: "Javascript",
       techStack: ["react", "javascript", "chakra-ui"],
       url: "https://github.com/febrydjr/Uku-Uku-App-The-Payroll-Management",
-      live: "",
+      live: "https://uku-uku.vercel.app",
       stargazers_count: 1,
       forks_count: 1,
     },
