@@ -8,7 +8,7 @@ export default function PortfolioData() {
       language: "Javascript",
       techStack: ["react", "javascript", "chakra-ui"],
       url: "https://github.com/febrydjr/Caishen-The-Cashiers-App",
-      live: "",
+      live: "https://thecaishen.vercel.app",
       stargazers_count: 0,
       forks_count: 22,
     },
