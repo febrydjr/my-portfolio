@@ -19,7 +19,7 @@ export default function SkillData() {
       name: "JavaScript",
       description: "Web development",
       link: "https://www.javascript.com",
-      type: "development",
+      type: "language",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
     },
@@ -51,6 +51,13 @@ export default function SkillData() {
       link: "https://www.mysql.com/",
       type: "database",
       image: "https://pngimg.com/d/mysql_PNG29.png",
+    },
+    {
+      name: "SQL",
+      description: "Database",
+      link: "https://www.w3schools.com/sql/",
+      type: "language",
+      image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
     },
     {
       name: "ExpressJS",
