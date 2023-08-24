@@ -53,6 +53,14 @@ export default function SkillData() {
       image: "https://pngimg.com/d/mysql_PNG29.png",
     },
     {
+      name: "ExpressJS",
+      description: "Backend Development",
+      link: "https://expressjs.com",
+      type: "development",
+      image:
+        "https://blog.amt.in/wp-content/uploads/2017/12/e16da876-c2fd-4eb8-ae72-4b193c534938-Edited.png",
+    },
+    {
       name: "Visual Studio Code",
       description: "IDE",
       link: "https://code.visualstudio.com/",
