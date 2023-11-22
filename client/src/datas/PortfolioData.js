@@ -1,6 +1,18 @@
 export default function PortfolioData() {
   return [
     {
+      title: "NetComp",
+      description:
+        "Faster delivery, more efficient shipping costs, and the opportunity to find products that may not be available in a single warehouse with Multi Warehouse features",
+      cover: "netcomp.png",
+      language: "Javascript",
+      techStack: ["react", "javascript", "chakra-ui", "express"],
+      url: "https://github.com/febrydjr/NetComp/tree/development",
+      live: "https://jcwd011002.purwadhikabootcamp.com",
+      stargazers_count: 1,
+      forks_count: 22,
+    },
+    {
       title: "Caishen: The Cashiers App",
       description:
         "A portfolio app showcasing my skills and experience, built using Javascript, React, and Chakra UI.",
